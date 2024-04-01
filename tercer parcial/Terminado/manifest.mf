@@ -1,0 +1,2 @@
+Main-Class: Principal
+Class-Path: mysql-connector-java-5.1.48-bin.jar

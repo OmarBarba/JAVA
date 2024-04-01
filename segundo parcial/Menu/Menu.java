@@ -1,0 +1,85 @@
+//Menus
+
+import javax.swing.*;
+import java.awt.event.*;
+
+public class Menu extends JFrame implements ActionListener{
+
+	public JMenuBar menubar;
+	public JMenu menu1, menu2, menu3,menu4;
+	public JMenuItem menuitem1, menuitem2, menuitem3;
+	public JMenuItem menuitem4, menuitem5, menuitem6;
+	public JLabel etiqueta;
+
+public Menu(){
+
+    setLayout(null);
+	setDefaultCloseOperation(EXIT_ON_CLOSE);
+	setTitle("Ventana con Menus");
+	
+	menubar = new JMenuBar();
+	setJMenuBar(menubar);
+
+    menu1=new JMenu("Menu 1");
+	menubar.add(menu1);
+	menu2=new JMenu("Menu 2");
+	menubar.add(menu2);
+	menu3=new JMenu("Menu 3");
+	menubar.add(menu3);
+	menu4=new JMenu("Menu 4");
+   
+	
+	menuitem1 = new JMenuItem("Opcion 1");
+	menuitem2 = new JMenuItem("Opcion 2");
+	menuitem3 = new JMenuItem("Opcion 3");
+	menuitem5 = new JMenuItem("Opcion 5");
+	menuitem4 = new JMenuItem("Opcion 4");
+	menu1.add(menuitem1);
+	menu1.add(menuitem2);
+	menu2.add(menuitem3);
+	menu3.add(menuitem5);
+	menu2.add(menu4);
+	menu4.add(menuitem4);
+	
+
+	etiqueta = new JLabel(" ");
+	etiqueta.setBounds(140,150,150,15);
+	add(etiqueta);
+	
+	menuitem1.addActionListener(this);
+	menuitem2.addActionListener(this);
+	menuitem3.addActionListener(this);
+	menuitem4.addActionListener(this);
+	menuitem5.addActionListener(this);
+	}
+
+ public void actionPerformed(ActionEvent e ){
+  
+  if (e.getSource()==menuitem1){
+  etiqueta.setText("Elegiste la opcion 1");
+  }
+  if (e.getSource()==menuitem2){
+  etiqueta.setText("Elegiste la opcion 2");
+  }
+  if (e.getSource()==menuitem4){
+  etiqueta.setText("Elegiste la opcion 4");
+  }
+  if (e.getSource()==menuitem3){
+  etiqueta.setText("Elegiste la opcion 3");
+  }
+  
+  if (e.getSource()==menuitem5){
+  etiqueta.setText("Elegiste la opcion 5");
+  }
+ 
+ }
+ 
+ public static void main (String args []){
+	 Menu menus = new Menu();
+	 menus.setBounds(200,300,400,400);
+	 menus.setVisible(true);
+	 menus.setResizable(true);
+	 }
+	 
+	 
+ }

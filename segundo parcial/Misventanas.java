@@ -1,0 +1,21 @@
+import javax.swing.*;
+
+public class Misventanas extends JFrame{
+ JLabel etiqueta;
+ 
+ public Misventnas(){
+	 
+    setLayout(null);
+	setDefaultCloseOperation(EXIT_ON_CLOSE);
+	
+		etiqueta = new JLabel("Omar");
+		etiqueta.setBounds(10,10,200,15);
+		add(etiqueta);
+ }
+ 
+public static void main(String args[]){
+	Misventanas Misventanas = new Misventanas();
+	Misventanas.setBounds(500,225,300,400);
+	Misventanas.setVisible(true);
+}
+}
